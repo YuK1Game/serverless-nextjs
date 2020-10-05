@@ -1,0 +1,10 @@
+AppName: ${env.APP_NAME}
+Domain: ${env.APP_DOMAIN}
+
+Project:
+  component: "@sls-next/serverless-component@1.17.0"
+  inputs:
+    name: ${AppName}-function
+    domain: ["development", "${Domain}"]
+    bucketRegion: ap-northeast-1
+    bucketName: serverless-bucket-${AppName}
